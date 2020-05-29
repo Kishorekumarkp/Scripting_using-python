@@ -1,0 +1,17 @@
+import tweepy
+
+auth = tweepy.OAuthHandler('6RI303XmMvbenX2wtrCGQtlYX',
+'O7WcUyyWEhholxpyzoN9RiBCxt9WOKgI28562Yis59eA9Xccs8')
+auth.set_access_token('1261840540619816960-D8xQT5m73Q6Q31FWxGdk5x61YiJeZq' , 'uVkAHkxztAZmhTqcGQN0AwLib0CflXaIJ1j04TOhgzgvd')
+
+api = tweepy.API(auth)
+
+#public_tweets = api.home_timeline()
+#for tweet in public_tweets:
+#    print(tweet.text)  # gives twwets in twitter
+
+user = api.me()
+
+print(user.name)  # gives twitter user name
+print(user.screen_name) #gives twitter id
+print(user.followers_count)
